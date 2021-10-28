@@ -73,10 +73,16 @@
           </li>
           @endif
           @else
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('yLogout') }}">
-              {{ __('Logout') }}
+          <li class="nav-item dropdown active" style="width: 15%; text-align: center;">
+            <a class="nav-link dropdown-toggle" href="{{ route('yLogout') }}" id="navbarDropdownXL3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ __('Profile') }}
+              
             </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownXL3">
+              <a class="dropdown-item" href="#" style="font-weight:bold">{{ __('Change Profile') }}</a>
+              <a class="dropdown-item" href="#" style="font-weight:bold">{{ __('Your Ordered') }} </a>
+              <a class="dropdown-item" href="{{ route('yLogout') }}" style="font-weight:bold">{{ __('Logout') }}</a>
+            </div>
           </li>
           @endguest
         </ul>
