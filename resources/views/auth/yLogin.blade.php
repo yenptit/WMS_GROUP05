@@ -1,4 +1,4 @@
-@extends('layouts.yApp')
+@extends('layouts.yAppRegister')
 
 @section('content')
 <div class="container">
@@ -60,7 +60,7 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                <a class="btn btn-link" href="/yForget-password">
+                                <a class="btn btn-link" href="{{ url('yForget-password') }}">
                                     Forgot Your Password?
                                 </a>
                             </div>

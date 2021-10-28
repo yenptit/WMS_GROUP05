@@ -9,7 +9,7 @@
                             {{ __('Check your Email to get new password ( MailTrap).') }}
                         </div>
                     @endif
-                    <a href="{{ url('/yReset/'.$token) }}">Click Here to get New Password</a>
+                    <a href="{{ url('/yReset-password/'.$token) }}">Click Here to get New Password</a>
                 </div>
             </div>
         </div>

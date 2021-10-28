@@ -52,33 +52,36 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContentXL1" aria-controls="navbarSupportedContentXL" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      @guest
+
       <div class="collapse navbar-collapse" id="navbarSupportedContentXL1">
         <ul class="navbar-nav mr-auto" style="width: 80%;">
         </ul>
+
         <ul class="nav navbar-nav justify-content-center" style="width: 20%">
+          @guest
           <li class="nav-item">
             <a class="nav-link" href="{{ route('yLogin') }}" style="color:white">
               {{ __('Login') }}
             </a>
           </li>
 
-          <!-- @if (Route::has('yRegister')) -->
+          @if (Route::has('yRegister'))
           <li class="nav-item">
             <a class="nav-link" href="{{ route('yRegister') }}" style="color:white">
               {{ __('Register') }}
             </a>
           </li>
-          <!-- @endif -->
+          @endif
           @else
           <li class="nav-item">
             <a class="nav-link" href="{{ route('yLogout') }}">
               {{ __('Logout') }}
             </a>
           </li>
+          @endguest
         </ul>
       </div>
-      @endguest
+
     </nav>
     <nav class="navbar navbar-expand-xl navbar-dark " style="background-color: dimgrey;">
       <a class="navbar-brand" href="{{ route('yHome') }}">{{ config('app.name', 'SHOESSHOP') }}</a>

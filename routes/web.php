@@ -32,12 +32,14 @@ Route::get('yLogin', 'Auth\yLoginController@login')->name('yLogin');
 Route::post('yLogin', 'Auth\yLoginController@authenticate');
 Route::get('yLogout', 'Auth\yLoginController@logout')->name('yLogout');
 
+// http://localhost/wms_group05/public/forget-password
 // Create Forget Password Routes
+
 Route::get('yForget-password', 'Auth\yForgotPasswordController@getEmail');
 Route::post('yForget-password', 'Auth\yForgotPasswordController@postEmail');
-
 // Create Reset Password Routes
-Route::get('yReset/{token}', 'Auth\yResetPasswordController@getPassword');
-Route::post('yReset', 'Auth\yResetPasswordController@updatePassword');
+Route::get('yReset-password/{token}', 'Auth\yResetPasswordController@getPassword');
+Route::post('yReset-password', 'Auth\yResetPasswordController@updatePassword');
+
 
 
